@@ -1,0 +1,100 @@
+[
+    {
+        "DisplayName": "Server Name",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "General:settings:1",
+        "Description": "Display name shown in the server browser",
+        "Keywords": "name,servername,ServerName",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "ParamFieldName": "ServerName",
+        "DefaultValue": "AMP Powered Motor Town Server",
+        "Placeholder": "My Motor Town Server",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Welcome Message",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "General:settings:1",
+        "Description": "Message shown to players upon connection. Use \\n for line breaks.",
+        "Keywords": "message,motd,welcome,ServerMessage",
+        "FieldName": "ServerMessage",
+        "InputType": "text",
+        "ParamFieldName": "ServerMessage",
+        "DefaultValue": "Welcome to the server!",
+        "Placeholder": "Welcome!",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max Players",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "General:settings:1",
+        "Description": "Maximum number of players. Recommended: 10 for average systems, 20 for high-performance. Hard limit: ~100.",
+        "Keywords": "maxplayers,players,slots,MaxPlayers",
+        "FieldName": "MaxPlayers",
+        "InputType": "number",
+        "ParamFieldName": "MaxPlayers",
+        "DefaultValue": "10",
+        "MinValue": "1",
+        "MaxValue": "100",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Enable Web API",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "Web API:api:2",
+        "Description": "Enable the HTTP Web API for remote server management. API traffic is unencrypted — do not expose publicly without a TLS proxy.",
+        "Keywords": "webapi,api,http,bEnableHostWebAPIServer",
+        "FieldName": "bEnableHostWebAPIServer",
+        "InputType": "checkbox",
+        "ParamFieldName": "bEnableHostWebAPIServer",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Web API Password",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "Web API:api:2",
+        "Description": "Password required to authenticate Web API requests. Stored in plaintext in the config file.",
+        "Keywords": "webapi,password,HostWebAPIServerPassword",
+        "FieldName": "HostWebAPIServerPassword",
+        "InputType": "password",
+        "ParamFieldName": "HostWebAPIServerPassword",
+        "DefaultValue": "",
+        "SkipIfEmpty": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Web API Port",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "Web API:api:2",
+        "Description": "TCP port for the Web API server. Only relevant when Web API is enabled.",
+        "Keywords": "webapi,port,HostWebAPIServerPort",
+        "FieldName": "HostWebAPIServerPort",
+        "InputType": "number",
+        "ParamFieldName": "HostWebAPIServerPort",
+        "DefaultValue": "8080",
+        "MinValue": "1024",
+        "MaxValue": "65535",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Additional Arguments",
+        "Category": "Motor Town Server:directions_car",
+        "Subcategory": "Advanced:tune:3",
+        "Description": "Extra command-line arguments appended to the server launch command.",
+        "Keywords": "args,arguments,custom,advanced",
+        "FieldName": "CustomArgs",
+        "InputType": "text",
+        "ParamFieldName": "CustomArgs",
+        "DefaultValue": "",
+        "SkipIfEmpty": true,
+        "IncludeInCommandLine": false,
+        "EnumValues": {}
+    }
+]

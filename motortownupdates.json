@@ -1,0 +1,36 @@
+[
+    {
+        "UpdateStageName": "Motor Town Dedicated Server Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "2223650",
+        "UpdateSourceArgs": "1369670",
+        "ForceDownloadPlatform": "Windows",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Initialise Wine",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullRootDir}}.wine\\\" >/dev/null 2>&1; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Initialise Server Config",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$cfg='{{$FullBaseDir}}DedicatedServerConfig.json'; $sample='{{$FullBaseDir}}DedicatedServerConfig_Sample.json'; if (-not (Test-Path $cfg) -and (Test-Path $sample)) { Copy-Item $sample $cfg }\"",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Initialise Server Config",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cfg='{{$FullBaseDir}}DedicatedServerConfig.json'; sample='{{$FullBaseDir}}DedicatedServerConfig_Sample.json'; [ ! -f \\\"$cfg\\\" ] && [ -f \\\"$sample\\\" ] && cp \\\"$sample\\\" \\\"$cfg\\\"\"",
+        "SkipOnFailure": true
+    }
+]
