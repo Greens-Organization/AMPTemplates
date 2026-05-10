@@ -3,10 +3,27 @@
         "UpdateStageName": "Motor Town Dedicated Server Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "1369670",
+        "UpdateSourceData": "2223650",
         "UpdateSourceArgs": "1369670",
+        "UpdateSourceVersion": "test2 -betapassword motortowndedi",
         "ForceDownloadPlatform": "Windows",
         "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Copy Steam DLLs",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"Get-ChildItem '{{$FullBaseDir}}*.dll' | Copy-Item -Destination '{{$FullBaseDir}}MotorTown\\Binaries\\Win64\\'\"",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Copy Steam DLLs",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"find '{{$FullBaseDir}}' -maxdepth 1 -name '*.dll' -exec cp {} '{{$FullBaseDir}}MotorTown/Binaries/Win64/' \\;\"",
         "SkipOnFailure": true
     },
     {

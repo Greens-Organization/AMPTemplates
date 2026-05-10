@@ -29,17 +29,17 @@ Meta.ImportableExtensions=[".json"]
 Meta.AppIsMultiIPAware=False
 App.DisplayName=Motor Town: Behind The Wheel
 App.RootDir=./motortown/
-App.BaseDirectory=./motortown/1369670/
+App.BaseDirectory=./motortown/2223650/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=1369670\MotorTown\Binaries\Win64\MotorTown-Win64-Shipping.exe
+App.ExecutableWin=2223650\MotorTown\Binaries\Win64\MotorTownServer-Win64-Shipping.exe
 App.ExecutableLinux=/usr/bin/wine
-App.WorkingDir=1369670
-App.LinuxCommandLineArgs="./MotorTown/Binaries/Win64/MotorTown-Win64-Shipping.exe"
+App.WorkingDir=2223650
+App.LinuxCommandLineArgs="./MotorTown/Binaries/Win64/MotorTownServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} Jeju_World -server -log -nullrhi -port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -useperfthreads -stdout -FullStdOutLogOutput {{$FormattedArgs}} {{CustomArgs}}
+App.CommandLineArgs={{$PlatformArgs}} Jeju_World?listen? -server -log -nullrhi -port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -useperfthreads -stdout -FullStdOutLogOutput {{$FormattedArgs}} {{CustomArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"SteamAppId":"1369670","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","WINEDLLOVERRIDES":"version.dll=n,b"}
+App.EnvironmentVariables={"SteamAppId":"2223650","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","WINEDLLOVERRIDES":"version.dll=n,b"}
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter=
 App.ExitMethod=OS_CLOSE
