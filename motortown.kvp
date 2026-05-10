@@ -36,7 +36,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=1369670
 App.LinuxCommandLineArgs="./MotorTown/Binaries/Win64/MotorTown-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} Jeju_World -server -log -port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -useperfthreads -stdout -FullStdOutLogOutput {{$FormattedArgs}} {{CustomArgs}}
+App.CommandLineArgs={{$PlatformArgs}} Jeju_World -server -log -nullrhi -port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -useperfthreads -stdout -FullStdOutLogOutput {{$FormattedArgs}} {{CustomArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"1369670","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","WINEDLLOVERRIDES":"version.dll=n,b"}
