@@ -5,7 +5,7 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2223650",
         "UpdateSourceArgs": "1369670",
-        "UpdateSourceVersion": "test2 -betapassword motortowndedi",
+        "UpdateSourceVersion": "beta -betapassword motortowndedi",
         "ForceDownloadPlatform": "Windows",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
