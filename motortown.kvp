@@ -31,10 +31,10 @@ App.DisplayName=Motor Town: Behind The Wheel
 App.RootDir=./motortown/
 App.BaseDirectory=./motortown/1369670/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=1369670\MotorTown\Binaries\Win64\MotorTownServer-Win64-Shipping.exe
+App.ExecutableWin=1369670\MotorTown\Binaries\Win64\MotorTown-Win64-Shipping.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=1369670
-App.LinuxCommandLineArgs="./MotorTown/Binaries/Win64/MotorTownServer-Win64-Shipping.exe"
+App.LinuxCommandLineArgs="./MotorTown/Binaries/Win64/MotorTown-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} Jeju_World -server -log -port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -useperfthreads -stdout -FullStdOutLogOutput {{$FormattedArgs}} {{CustomArgs}}
 App.UseLinuxIOREDIR=False
