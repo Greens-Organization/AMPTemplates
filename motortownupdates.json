@@ -7,15 +7,15 @@
         "UpdateSourceArgs": "1369670",
         "ForceDownloadPlatform": "Windows",
         "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
+        "SkipOnFailure": true
     },
     {
         "UpdateStageName": "Initialise Wine",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullRootDir}}.wine\\\" >/dev/null 2>&1; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init\"",
-        "SkipOnFailure": false
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullRootDir}}.wine\\\" >/dev/null 2>&1; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all wineboot --init\"",
+        "SkipOnFailure": true
     },
     {
         "UpdateStageName": "Initialise Server Config",
